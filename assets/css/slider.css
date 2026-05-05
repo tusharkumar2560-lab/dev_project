@@ -1,0 +1,57 @@
+/* Popular Section */
+.popular{
+    background:white;
+}
+
+.swiper{
+    width:100%;
+    padding:20px 10px 60px;
+}
+
+.swiper-slide{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+    transition:.35s;
+}
+
+.swiper-slide:hover{
+    transform:translateY(-10px);
+}
+
+.swiper-slide a{
+    text-decoration:none;
+    color:#222;
+}
+
+.swiper-slide img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    display:block;
+}
+
+.swiper-slide h3{
+    padding:22px;
+    text-align:center;
+    font-size:24px;
+    font-weight:600;
+}
+
+/* Arrows */
+.swiper-button-next,
+.swiper-button-prev{
+    color:#008cff;
+    font-weight:bold;
+}
+
+/* Pagination */
+.swiper-pagination-bullet{
+    background:#008cff;
+    opacity:.5;
+}
+
+.swiper-pagination-bullet-active{
+    opacity:1;
+}
