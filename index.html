@@ -15,8 +15,20 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+
+
+    <link rel="stylesheet"
+href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+
 </head>
 <body>
+
+    <div class="loader">
+    <div class="loader-content">
+        <div class="spinner"></div>
+        <h2>ExploreWorld</h2>
+    </div>
+</div>
 
 <nav class="navbar">
     <div class="logo">ExploreWorld</div>
@@ -36,59 +48,66 @@
 
     <!-- Hero -->
     <section class="hero">
-        <div class="hero-content">
+        <div class="hero-content" data-aos="zoom-in">
             <h1>Discover Beautiful Places</h1>
             <p>Travel with comfort, luxury and adventure.</p>
             <button id="openModal">Book Now</button>
         </div>
     </section>
 
-    <section class="search-section">
+<section class="search-section" data-aos="fade-up">
     <h2>Find Your Dream Destination</h2>
 
     <div class="search-box">
-        <input type="text" placeholder="Search destination...">
-        <button>Search</button>
+        <input
+            id="searchInput"
+            type="text"
+            placeholder="Search destination..."
+        >
+
+        <button id="searchBtn">Search</button>
     </div>
+
+    <p id="searchMsg"></p>
 </section>
 
 
     <!-- Slider -->
-    <section class="popular">
+    <section class="popular" data-aos="fade-up">
         <h2>Popular Destinations</h2>
 
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
 
-                <div class="swiper-slide">
+                <div class="swiper-slide"  id="paris-card">
                     <a href="pages/paris.html">
                         <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=80">
 <h3>Paris</h3>
                     </a>
                 </div>
 
-                <div class="swiper-slide">
+                <div class="swiper-slide" id="bali-card">
                     <a href="pages/bali.html">
                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=80">
 <h3>Bali</h3>
                     </a>
                 </div>
 
-                <div class="swiper-slide">
+                <div class="swiper-slide" id="switzerland-card">
                     <a href="pages/switzerland.html">
                         <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80">
 <h3>Switzerland</h3>
                     </a>
                 </div>
 
-                <div class="swiper-slide">
+                <div class="swiper-slide"  id="dubai-card">
                     <a href="pages/dubai.html">
                         <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80">
 <h3>Dubai</h3>
                     </a>
                 </div>
 
-                <div class="swiper-slide">
+                <div class="swiper-slide" id="maldives-card">
                     <a href="pages/maldives.html">
                        <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=900&q=80">
 <h3>Maldives</h3>
@@ -102,9 +121,64 @@
         </div>
     </section>
 
+    <section class="packages" data-aos="fade-up"></section>
+
+     <h2>Popular Packages</h2>
+
+    <div class="package-container">
+
+        <!-- Card -->
+        <div class="package-card" data-aos="flip-left">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=80">
+
+            <div class="package-content">
+                <h3>Paris Tour</h3>
+
+                <p>5 Days / 4 Nights</p>
+
+                <h4>₹45,000</h4>
+
+                <button>Book Now</button>
+            </div>
+        </div>
+
+        <!-- Card -->
+        <div class="package-card" data-aos="flip-left">
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=80">
+
+            <div class="package-content">
+                <h3>Bali Tour</h3>
+
+                <p>4 Days / 3 Nights</p>
+
+                <h4>₹38,000</h4>
+
+                <button>Book Now</button>
+            </div>
+        </div>
+
+        <!-- Card -->
+        <div class="package-card" data-aos="flip-left">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80">
+
+            <div class="package-content">
+                <h3>Dubai Tour</h3>
+
+                <p>6 Days / 5 Nights</p>
+
+                <h4>₹60,000</h4>
+
+                <button>Book Now</button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
 
     <!-- Why us -->
-    <section class="why">
+    <section class="why" data-aos="fade-up">
         <h2>Why Choose Us</h2>
 
         <div class="features">
@@ -114,7 +188,7 @@
         </div>
     </section>
 
-    <section class="booking">
+    <section class="booking" data-aos="fade-up">
     <h2>Book Your Trip</h2>
 
     <form>
@@ -126,22 +200,22 @@
 </section>
 
 
-<section class="testimonials">
+<section class="testimonials" data-aos="fade-up">
     <h2>What Travelers Say</h2>
 
     <div class="review-container">
 
-        <div class="review fade-up">
+        <div class="review fade-up" data-aos="zoom-in">
             <p>"Amazing experience. Best trip ever!"</p>
             <h4>- Rahul</h4>
         </div>
 
-        <div class="review fade-up">
+        <div class="review fade-up" data-aos="zoom-in">
             <p>"Everything was perfectly managed."</p>
             <h4>- Priya</h4>
         </div>
 
-        <div class="review fade-up">
+        <div class="review fade-up" data-aos="zoom-in">
             <p>"Luxury hotels + affordable price."</p>
             <h4>- Aman</h4>
         </div>
@@ -150,10 +224,115 @@
 </section>
 
 
+
+<section class="faq" data-aos="fade-up">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-container">
+
+        <!-- Item -->
+        <div class="faq-item">
+            <div class="faq-question">
+                How can I book a trip?
+                <span>+</span>
+            </div>
+
+            <div class="faq-answer">
+                You can book your trip using our booking form or package section.
+            </div>
+        </div>
+
+        <!-- Item -->
+        <div class="faq-item">
+            <div class="faq-question">
+                Do you provide international tours?
+                <span>+</span>
+            </div>
+
+            <div class="faq-answer">
+                Yes, we provide both domestic and international travel packages.
+            </div>
+        </div>
+
+        <!-- Item -->
+        <div class="faq-item">
+            <div class="faq-question">
+                Can I customize my package?
+                <span>+</span>
+            </div>
+
+            <div class="faq-answer">
+                Yes, packages can be customized according to your budget and needs.
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
     <!-- Footer ------------>
-    <footer>
-        © 2026 ExploreWorld
-    </footer>
+<footer class="footer" data-aos="fade-up">
+
+    <div class="footer-container">
+
+        <!-- Logo -->
+        <div class="footer-box">
+            <h2>ExploreWorld</h2>
+            <p>
+                Explore beautiful destinations around the world
+                with comfort, adventure and luxury.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+
+            <a href="#">Home</a>
+            <a href="#">Destinations</a>
+            <a href="#">Packages</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <!-- Popular Places -->
+        <div class="footer-box">
+            <h3>Popular Places</h3>
+
+            <a href="pages/paris.html">Paris</a>
+            <a href="pages/bali.html">Bali</a>
+            <a href="pages/dubai.html">Dubai</a>
+            <a href="pages/maldives.html">Maldives</a>
+        </div>
+
+        <section class="packages">
+
+   
+
+        <!-- Contact -->
+        <div class="footer-box">
+            <h3>Contact</h3>
+
+            <p>Email: Tusharkumar2389@gmail.com</p>
+            <p>Phone: +91 9876543210</p>
+            <p>New Delhi, India</p>
+
+            <div class="socials">
+                <a href="#">🌐</a>
+                <a href="#">📘</a>
+                <a href="#">📸</a>
+                <a href="#">🐦</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 ExploreWorld | All Rights Reserved
+    </div>
+
+</footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -174,6 +353,28 @@
         </form>
     </div>
 </div>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/919876543210"
+class="whatsapp-btn"
+target="_blank">
+    💬
+</a>
+
+<!-- Back To Top -->
+<button id="topBtn">↑</button>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+      duration: 1000,
+      once: false,
+      mirror: true
+  });
+</script>
+
+<script src="assets/js/main.js"></script>
 
 </body>
 </html>
