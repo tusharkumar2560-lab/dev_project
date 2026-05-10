@@ -136,3 +136,67 @@ window.addEventListener("load", () => {
     }
 
 });
+
+
+
+/* ================= BOOKING FLOW ================= */
+
+const bookingForm = document.getElementById("bookingForm");
+const successModal = document.getElementById("successModal");
+const ticketBox = document.getElementById("ticketBox");
+const closeSuccess = document.getElementById("closeSuccess");
+
+if(bookingForm){
+
+    bookingForm.addEventListener("submit",(e)=>{
+
+        e.preventDefault();
+
+        const name =
+        document.getElementById("userName").value;
+
+        const email =
+        document.getElementById("userEmail").value;
+
+        const destination =
+        document.getElementById("userDestination").value;
+
+        const bookingId =
+        "EXW" + Math.floor(Math.random()*100000);
+
+        const booking = {
+            bookingId,
+            name,
+            email,
+            destination,
+            status:"Confirmed"
+        };
+
+        localStorage.setItem(
+            "latestBooking",
+            JSON.stringify(booking)
+        );
+
+        ticketBox.innerHTML = `
+            <p><b>Booking ID:</b> ${bookingId}</p>
+            <p><b>Name:</b> ${name}</p>
+            <p><b>Destination:</b> ${destination}</p>
+            <p><b>Status:</b> Confirmed</p>
+        `;
+
+        modal.classList.remove("active");
+        successModal.classList.add("active");
+
+        bookingForm.reset();
+
+    });
+
+}
+
+if(closeSuccess){
+
+    closeSuccess.onclick = ()=>{
+        successModal.classList.remove("active");
+    };
+
+}

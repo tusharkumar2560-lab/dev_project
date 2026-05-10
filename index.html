@@ -340,15 +340,15 @@ href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 
     <script src="assets/js/main.js"></script>
 
-    <div class="modal" id="bookingModal">
+<div class="modal" id="bookingModal">
     <div class="modal-box">
         <span id="closeModal">&times;</span>
         <h2>Book Your Trip</h2>
 
-        <form>
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email" required>
-            <input type="text" placeholder="Destination" required>
+        <form id="bookingForm">
+            <input type="text" id="userName" placeholder="Full Name" required>
+            <input type="email" id="userEmail" placeholder="Email" required>
+            <input type="text" id="userDestination" placeholder="Destination" required>
             <button type="submit">Confirm Booking</button>
         </form>
     </div>
@@ -375,6 +375,15 @@ target="_blank">
 </script>
 
 <script src="assets/js/main.js"></script>
+<div class="modal" id="successModal">
+    <div class="modal-box">
+        <h2>Booking Confirmed ✅</h2>
+
+        <div id="ticketBox"></div>
+
+        <button id="closeSuccess">Close</button>
+    </div>
+</div>
 
 </body>
 </html>

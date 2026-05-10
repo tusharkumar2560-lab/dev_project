@@ -628,3 +628,20 @@ section h2{
     transform:scale(1.06);
     box-shadow:0 0 30px rgba(0,140,255,.45);
 }
+
+#ticketBox{
+    margin:25px 0;
+    line-height:2;
+    font-size:18px;
+}
+
+#closeSuccess{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#008cff;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
